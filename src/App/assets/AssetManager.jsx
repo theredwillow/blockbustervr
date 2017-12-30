@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export class Assets extends Component {
+// Import textures
+import carpet from './textures/broadloom_carpet.jpg';
 
-    constructor(props){
-        super(props);
-        var textures = [];
-        // <img id="advertisement" src="ad.png">
-    }
+export class Assets extends Component {
 
   render() {
     return (
         <a-assets>
-            {textures}
+            <img id="carpet" src={carpet} alt="" />
         </a-assets>
     );
   }
