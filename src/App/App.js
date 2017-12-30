@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AssetManager from './assets/AssetManager.jsx';
+import Shelf from './components/Shelf/Shelf.jsx';
 
 export class App extends Component {
 
@@ -15,6 +16,8 @@ export class App extends Component {
         </a-camera>
 
         <a-plane material="src:#carpet; repeat: 75 150" height="100" width="100" rotation="-90 0 0"></a-plane>
+
+        <Shelf />
 
         { /* <a-sky src={this.props.room}></a-sky> */ }
 
