@@ -1,9 +1,7 @@
 import { combineReducers, createStore } from 'redux';
 
-import sixthStreetCarousel from './assets/audio/sixthstreet_carousel.m4a';
-var sounds = [ sixthStreetCarousel ];
-
 // actions.js
+/*
 export const changeRoom = img => ({
   type: 'CHANGE_ROOM',
   img
@@ -30,8 +28,8 @@ export const room = (state=[], action) => {
   }
 
 }
-
-export const reducers = combineReducers({ room });
+*/
+export const reducers = combineReducers({ /*room*/ });
 
 
 
