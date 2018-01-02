@@ -8,7 +8,7 @@ export class Building extends Component {
     return (
       <a-entity>
 
-        <Shelf />
+        <Shelf width="4" />
 
       </a-entity>
     );
