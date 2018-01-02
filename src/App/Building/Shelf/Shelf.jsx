@@ -9,7 +9,10 @@ export class Shelf extends Component {
     this.dimensions = {
       width: 4,
       x: 0,
-      z: -3
+      z: -3,
+      primary: "#042599",
+      secondary: "#fbfbfb",
+      tertiary: "#f7ec22"
     };
 
     let shelfLength = this.dimensions.width - 0.1;
@@ -30,13 +33,13 @@ export class Shelf extends Component {
 
       this.ledges.push( (
         <a-entity key={l} position={[0, l, 0.13].join(" ")}>
-          <a-box class="shelf-ledge" color="purple"
+          <a-box class="shelf-ledge" color={this.dimensions.secondary}
             depth="0.23" height="0.025" width={this.dimensions.width}
             position={ [this.dimensions.x, 0.0125, 0].join(" ") }
           >
           {videoStacks}
           </a-box>
-          <a-box class="shelf-edge" color="green"
+          <a-box class="shelf-edge" color={this.dimensions.primary}
           depth="0.01" height="0.08" width={this.dimensions.width}
           position={ [0, 0.04, 0.12].join(" ") }
           >
@@ -54,19 +57,19 @@ export class Shelf extends Component {
         width={this.dimensions.width}
       >
 
-        <a-box class="shelf-panel" color="red"
+        <a-box class="shelf-panel" color={this.dimensions.secondary}
           depth="0.025" height="2.25" width={this.dimensions.width}
           position="0 0 0"
         >
         </a-box>
 
-        <a-box class="shelf-wing" color="blue"
+        <a-box class="shelf-wing" color={this.dimensions.primary}
           width="0.05" height="2.25" depth="0.26"
           position={ [(this.dimensions.width/2 + 0.025), 0, 0.1175].join(" ") }
         >
         </a-box>
 
-        <a-box class="shelf-wing" color="yellow"
+        <a-box class="shelf-wing" color={this.dimensions.primary}
           width="0.05" height="2.25" depth="0.26"
           position={ [this.dimensions.x-(this.dimensions.width/2 + 0.025), 0, 0.1175].join(" ") }
         >

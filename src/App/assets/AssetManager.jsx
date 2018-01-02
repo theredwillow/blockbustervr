@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import carpet from './textures/broadloom_carpet.jpg';
 
 import dvdBigFish from './textures/dvd_bigfish.jpg';
+import dvdBlockbuster from './textures/blockbuster-dvd-case.jpg';
 
 export class Assets extends Component {
 
@@ -13,6 +14,7 @@ export class Assets extends Component {
         <a-assets>
             <img id="carpet" src={carpet} alt="" />
             <img id="dvd_bigfish" src={dvdBigFish} alt="" />
+            <img id="dvd_rental" src={dvdBlockbuster} alt="" />
         </a-assets>
     );
   }
