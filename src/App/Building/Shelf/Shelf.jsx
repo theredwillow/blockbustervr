@@ -19,6 +19,12 @@ export class Shelf extends Component {
     let numOfStacks = Math.floor(shelfLength / 0.4); // 1.25x the video width
     let stackSpace = shelfLength / numOfStacks;
 
+    var videoCovers = [];
+    for (let z = 0; z < 112; z++) {
+      videoCovers.push("#dvd_cover" + z);
+    }
+
+    this.currentDvd = 0;
     this.ledges = [];
     for (let l = -1.125; l <= 0.675; l = l + 0.45) {
 
@@ -26,7 +32,7 @@ export class Shelf extends Component {
       let vsPosition = 0.05 - (shelfLength / 2) + (stackSpace / 2);
       for (let s = 0; s < numOfStacks; s++) {
         videoStacks.push( (
-          <VideoStack key={l+s} videoCovers="2" x={vsPosition} />
+          <VideoStack key={l+s} dvdCover={videoCovers[this.currentDvd++]} dvdCount="2" x={vsPosition} />
         ) );
         vsPosition += stackSpace;
       }
