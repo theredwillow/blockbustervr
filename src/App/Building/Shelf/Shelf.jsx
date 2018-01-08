@@ -7,15 +7,12 @@ export class Shelf extends Component {
   constructor(props){
     super(props);
     this.dimensions = {
-      width: 4,
-      x: 0,
-      z: -3,
       primary: "#042599",
       secondary: "#fbfbfb",
       tertiary: "#f7ec22"
     };
 
-    let shelfLength = this.dimensions.width - 0.1;
+    let shelfLength = this.props.width - 0.1;
     let numOfStacks = Math.floor(shelfLength / 0.4); // 1.25x the video width
     let stackSpace = shelfLength / numOfStacks;
 
@@ -40,13 +37,13 @@ export class Shelf extends Component {
       this.ledges.push( (
         <a-entity key={l} position={[0, l, 0.13].join(" ")}>
           <a-box class="shelf-ledge" color={this.dimensions.secondary}
-            depth="0.23" height="0.025" width={this.dimensions.width}
-            position={ [this.dimensions.x, 0.0125, 0].join(" ") }
+            depth="0.23" height="0.025" width={this.props.width}
+            position={ [0, 0.0125, 0].join(" ") }
           >
           {videoStacks}
           </a-box>
           <a-box class="shelf-edge" color={this.dimensions.primary}
-          depth="0.01" height="0.08" width={this.dimensions.width}
+          depth="0.01" height="0.08" width={this.props.width}
           position={ [0, 0.04, 0.12].join(" ") }
           >
           </a-box>
@@ -59,25 +56,26 @@ export class Shelf extends Component {
   render() {
     return (
       <a-entity class="shelf"
-        position={ [this.dimensions.x, 1.125, this.dimensions.z].join(" ") }
-        width={this.dimensions.width}
+        position={ [this.props.x, 1.125, this.props.z].join(" ") }
+        rotation={"0 " + this.props.rotate + " 0"}
+        width={this.props.width}
       >
 
         <a-box class="shelf-panel" color={this.dimensions.secondary}
-          depth="0.025" height="2.25" width={this.dimensions.width}
+          depth="0.025" height="2.25" width={this.props.width}
           position="0 0 0"
         >
         </a-box>
 
         <a-box class="shelf-wing" color={this.dimensions.primary}
           width="0.05" height="2.25" depth="0.26"
-          position={ [(this.dimensions.width/2 + 0.025), 0, 0.1175].join(" ") }
+          position={ [(this.props.width/2 + 0.025), 0, 0.1175].join(" ") }
         >
         </a-box>
 
         <a-box class="shelf-wing" color={this.dimensions.primary}
           width="0.05" height="2.25" depth="0.26"
-          position={ [this.dimensions.x-(this.dimensions.width/2 + 0.025), 0, 0.1175].join(" ") }
+          position={ [-(this.props.width/2 + 0.025), 0, 0.1175].join(" ") }
         >
         </a-box>
 

@@ -11,11 +11,17 @@ export class App extends Component {
 
         <AssetManager />
 
-        <a-camera position="0 0 0" look-controls>
-          <a-cursor color="#4CC3D9" fuse="true" timeout="10"></a-cursor>
-        </a-camera>
+          <a-camera position="0 0 0" look-controls>
+            <a-cursor color="#4CC3D9" fuse="true" timeout="10"></a-cursor>
+            <a-ring color="teal"
+              radius-inner="2" radius-outer="1"
+              height="2" width="3"
+              rotation="90 0 0"
+              position="0 -0.5 0">
+            </a-ring>
+          </a-camera>
 
-        <a-plane material="src:#carpet; repeat: 75 150" height="100" width="100" rotation="-90 0 0"></a-plane>
+        <a-plane material="src:#carpet; repeat: 75 150" height="30" width="30" rotation="-90 0 0"></a-plane>
 
         <Building />
 

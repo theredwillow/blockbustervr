@@ -86,7 +86,7 @@ import ce from './MV5BNzJlYmZhNTMtMWM2Yy00MDZiLWJlOGMtMTRkOTEzYmZlZWQ5XkEyXkFqcG
 import cf from './MV5BNzliZmRlYTctYmNkYS00NzE5LWI1OWQtMTRiODY5MDMwMTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX96_CR0,0,96,142_AL_.jpg';
 import cg from './MV5BNzQxMDQ1NjA4N15BMl5BanBnXkFtZTcwNTE5MjQ3OA@@._V1_UX96_CR0,0,96,142_AL_.jpg';
 import ch from './MV5BNzVjY2U5MGQtNzkxMS00MWViLTk3M2QtNjM2ODliMmZiZDgyXkEyXkFqcGdeQXVyNDE1OTE2NQ@@._V1_UY142_CR2,0,96,142_AL_.jpg';
-import ci from './MV5BNzVjY2U5MGQtNzkxMS00MWViLTk3M2QtNjM2ODliMmZiZDgyXkEyXkFqcGdeQXVyNDE1OTE2NQ@@._V1_UY209_CR4,0,140,209_AL_.jpg';
+
 import cj from './MV5BODA2MjU1NTI1MV5BMl5BanBnXkFtZTgwOTU4ODIwMjE@._V1_UY142_CR0,0,96,142_AL_.jpg';
 import ck from './MV5BODg0NjQ5ODQ3OF5BMl5BanBnXkFtZTcwNjU4MjkzNA@@._V1_UX96_CR0,0,96,142_AL_.jpg';
 import cl from './MV5BODg3ODgxMjk1NV5BMl5BanBnXkFtZTgwMzE3Mjg2MjI@._V1_UX96_CR0,0,96,142_AL_.jpg';
@@ -203,7 +203,7 @@ const covers = [
     cf,
     cg,
     ch,
-    ci,
+
     cj,
     ck,
     cl,
