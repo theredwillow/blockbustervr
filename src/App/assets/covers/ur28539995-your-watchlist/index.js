@@ -1,6 +1,6 @@
 // ur28539995 Your Watchlist
 
-import a from './MV5BMDZkMTUxYWEtMDY5NS00ZTA5LTg3MTItNTlkZWE1YWRjYjMwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX96_CR0,0,96,142_AL_.jpg';
+import a from './test.jpg';
 import b from './MV5BMjA1ODQyOTYyNl5BMl5BanBnXkFtZTgwODIyODcwMzE@._V1_UY142_CR1,0,96,142_AL_.jpg';
 import c from './MV5BMjAwNzgyNTUxMF5BMl5BanBnXkFtZTgwNzc0ODc1OTE@._V1_UX96_CR0,0,96,142_AL_.jpg';
 import d from './MV5BMjE4MzMyNjExMl5BMl5BanBnXkFtZTcwMzI5NjM3Mw@@._V1_UX96_CR0,0,96,142_AL_.jpg';

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Shelf from './Shelf/Shelf.jsx';
+// import FrontDesk from './FrontDesk/FrontDesk.jsx';
 
 export class Building extends Component {
 
@@ -26,22 +27,27 @@ export class Building extends Component {
       rotation = -90;
     }
 
+    /*
+    THIS WILL CREATE SEPARATE SHELVES FOR LONGER ROWS
     let testNum = 1;
     let dividerCount = thisWidth / testNum;
     while (dividerCount > 4) {
       testNum++;
       dividerCount = thisWidth / testNum;
     }
+    */
 
     thisRow.push(
-      <Shelf x={ midPoint.x } z={ midPoint.z } width={ thisWidth } rotate={ rotation } />
+      <Shelf key={0} x={ midPoint.x } z={ midPoint.z } width={ thisWidth } rotate={ rotation } />
     );
     return thisRow;
   }
 
   render() {
     return (
-      <a-entity>
+      <a-entity id="store">
+
+        {/* <FrontDesk position="0" /> */}
 
         { /* Back wall */ }
         <Shelf width="4" x="12.695" z="-14.9875" rotate="0" />
