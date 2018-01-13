@@ -1,26 +1,19 @@
 import { combineReducers, createStore } from 'redux';
 
 // actions.js
-/*
-export const changeRoom = img => ({
-  type: 'CHANGE_ROOM',
-  img
+export const moveSide = shelf => ({
+  type: 'MOVE_SIDE',
+  shelf
 });
 
 
 
 // reducers.js
-export const room = (state=[], action) => {
+export const devTesting = (state=[], action) => {
   switch (action.type) {
 
-  case 'CHANGE_ROOM':
-    let roomName = action.img.match(/media\/(.*)?\..*?\..{3}$/i)[1];
-    let audio = sounds.find(function(s){ return s.includes(roomName); });
-    if (audio) {
-      audio = new Audio(audio);
-      audio.play();
-    }
-    return action.img;
+  case 'MOVE_SIDE':
+    return action.shelf;
 
   default:
     return state;
@@ -28,8 +21,8 @@ export const room = (state=[], action) => {
   }
 
 }
-*/
-export const reducers = combineReducers({ /*room*/ });
+
+export const reducers = combineReducers({ devTesting });
 
 
 
