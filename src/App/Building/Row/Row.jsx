@@ -43,7 +43,7 @@ export class Row extends Component {
     this.leftPoint = this.props.leftPoint;
     this.rightPoint = this.props.rightPoint;
     this.id = this.props.name || "";
-    this.endBalls = [];
+    this.items = [];
 
     let distX = this.leftPoint[0] - this.rightPoint[0];
     let distZ = this.leftPoint[1] - this.rightPoint[1];
@@ -64,23 +64,18 @@ export class Row extends Component {
     if ( this.rotation > 0 || this.rotation.toFixed(2) <= -90 ) { this.rotation += 180; }
     if (this.props.test) { console.log("added a spin", this.rotation); }
 
-    /*
-    THIS WILL CREATE SEPARATE SHELVES FOR LONGER ROWS
-    let testNum = 1;
-    let dividerCount = this.width / testNum;
-    while (dividerCount > 4) {
-      testNum++;
-      dividerCount = this.width / testNum;
-    }
-    */
+    this.items.push(
+      <Shelf id={this.id + "-shelf"} key={0}
+        x={ this.midPoint.x } z={ this.midPoint.z } width={ this.width } rotate={ this.rotation } />
+    );
 
     if ( this.props.test ) {
-      this.endBalls.push(
+      this.items.push(
         <a-sphere color="red" radius="0.1" key="left" id={this.id + "-redBall"}
           onClick={this.selectBall}
           position={ this.leftPoint[0] + " 1 " + this.leftPoint[1] }></a-sphere>
       );
-      this.endBalls.push(
+      this.items.push(
         <a-sphere color="green" radius="0.1" key="right" id={this.id + "-greenBall"}
           onClick={this.selectBall}
           position={ this.rightPoint[0] + " 1 " + this.rightPoint[1] }></a-sphere>
@@ -98,10 +93,7 @@ export class Row extends Component {
     return (
       <a-entity class="row" id={this.id}>
 
-        <Shelf id={this.id + "-shelf"} key={0}
-          x={ this.midPoint.x } z={ this.midPoint.z } width={ this.width } rotate={ this.rotation } />
-
-        { this.endBalls }
+        { this.items }
 
       </a-entity>
     );
